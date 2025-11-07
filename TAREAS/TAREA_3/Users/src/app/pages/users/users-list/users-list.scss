@@ -1,0 +1,30 @@
+/* users-list.scss - clase para pintar una fila seleccionada de color azul */
+
+.selected-row,
+tr.selected,
+.users-list__row--selected {
+	background-color: #e6f0ff; /* azul claro */
+	color: #072a66;            /* texto azul oscuro para contraste */
+	transition: background-color 150ms ease, color 150ms ease;
+}
+
+/* Opcional: estilos para las celdas dentro de la fila seleccionada */
+.selected-row > *,
+tr.selected > *,
+.users-list__row--selected > * {
+	border-color: rgba(7,42,102,0.12);
+}
+
+/* Hover y focus para mejorar la interacción */
+.selected-row:hover,
+tr.selected:hover,
+.users-list__row--selected:hover {
+	background-color: #d0e0ff;
+}
+
+.selected-row:focus,
+tr.selected:focus,
+.users-list__row--selected:focus {
+	outline: 3px solid rgba(7,42,102,0.18);
+	outline-offset: -1px;
+}

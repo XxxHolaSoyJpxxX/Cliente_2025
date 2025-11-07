@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "emailDestination": "mi.email.destino@example.com",
+    "name": "Nombre Apellido",
+    "role": "Desarrollador Backend",
+    "photo": "/images/profile.jpg"
+  },
+  "about": "Soy un desarrollador con experiencia en ...",
+  "skills": [
+    {"name": "Node.js", "level": "Avanzado"},
+    {"name": "TypeScript", "level": "Intermedio"},
+    {"name": "Sass", "level": "Intermedio"}
+  ],
+  "projects": [
+    {
+      "title": "Proyecto A",
+      "description": "Descripción breve",
+      "image": "/images/proyecto-a.png",
+      "link": "https://github.com/usuario/proyecto-a"
+    }
+  ]
+}

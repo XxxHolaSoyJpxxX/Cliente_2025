@@ -1,0 +1,25 @@
+{
+  "name": "mi-cv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --outDir dist",
+    "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^3.6.2"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1",
+    "sass": "^1.70.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.0.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

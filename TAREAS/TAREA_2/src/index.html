@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mi CV — Nombre Apellido</title>
+    <link rel="icon" href="/images/favicon.png" />
+  </head>
+  <body>
+    <header id="hero">
+      <img id="profile-photo" alt="Foto de perfil" src="/images/profile.jpg" />
+      <h1 id="name">Cargando...</h1>
+      <p id="role"></p>
+    </header>
+
+    <main>
+      <section id="about"></section>
+      <section id="skills"></section>
+      <section id="projects"></section>
+      <section id="contact">
+        <h2>Contacto</h2>
+        <form id="contact-form" method="POST" action="">
+          <label>
+            Nombre
+            <input type="text" name="name" id="nameInput" required />
+          </label>
+          <label>
+            Correo
+            <input type="email" name="email" id="emailInput" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="message" id="messageInput" rows="5" required></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde mi CV" />
+          <button type="submit">Enviar</button>
+        </form>
+        <div id="contact-msg" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
