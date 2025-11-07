@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Perfil del Usuario</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "iteso-blue": "#002D5A",
+            "iteso-light-blue": "#00B5E2",
+            "background-dark": "#121212",
+            "card-dark": "#1E1E1E",
+            "text-dark-primary": "#FFFFFF",
+            "text-dark-secondary": "#B3B3B3"
+          },
+          fontFamily: {
+            display: ["Roboto", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-background-dark text-gray-900 dark:text-text-dark-primary">
+<div class="min-h-screen flex flex-col">
+<header class="bg-white dark:bg-card-dark shadow-md sticky top-0 z-10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center space-x-4">
+<img alt="ITESO Logo" class="h-10 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_ITESO_normal.jpg"/>
+<h1 class="text-xl font-bold text-iteso-blue dark:text-white hidden sm:block">Portal de Evaluación</h1>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-gray-600 dark:text-text-dark-secondary hover:text-iteso-blue dark:hover:text-white">
+<span class="material-symbols-outlined">
+                dark_mode
+              </span>
+</button>
+<div class="relative">
+<button class="flex items-center space-x-2">
+<img alt="Foto de perfil" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABsh5cEFxRZmE8KPvLh5FelYfLaT30OeSRbnanFJoWtKp-ZbtSo_oACrsFBjFGVgL3Buf8r-NTdRpxtRQaxXsO607FHahZIJLMkC8pMQ6vxz0Fc8Lm0Ii3y_7cbte5SACiBQRjvUQj0283gXU9DeDUQAw-6Xtg-bnZqFhTXlGVg9DUp5eaOIWswL8YOrDfFFwWgohvivDNF0LEoAsGiWIjDFAgXRTMbOWFwOrUXzK1Z15LIpX7RL-esR1eDbyZbnYLtmd6NdBSP28"/>
+<span class="hidden md:inline font-medium">Ana García</span>
+<span class="material-symbols-outlined hidden md:inline">
+                  expand_more
+                </span>
+</button>
+</div>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:text-iteso-light-blue dark:hover:text-white" href="/login">
+              Cerrar Sesión
+            </a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center space-x-6 mb-8">
+<img alt="Foto de perfil de Ana García" class="h-24 w-24 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQhvnYnrPzxMxEXpLTxFQAGNt1lFMpx9wsjqtKyFCdwTwR9eAlZiNoU7d0xgBTXwEPzkUiW3JHCLyPEAxTqGm6Xb3q_jPMYlo4_WIVSvsyp8jwCHOBmm-AfgEX6hVG2BpgzEDnY8ULr9iNcR-8LO3_-umTIQZC1WUhYRUb4vxCnVZuGLmiLMOoco8WC5ggRlM8UhKj9H-rRnH1NIHBYtUnP7MC9bi7IxJxWlD46rABxVbmGx3aykLOIW06-xh4ZAxk6rW_A8FyeA"/>
+<div>
+<h2 class="text-3xl font-bold">Ana García</h2>
+<p class="text-lg text-gray-500 dark:text-text-dark-secondary">Estudiante - Ingeniería en Sistemas Computacionales</p>
+<p class="text-sm text-gray-500 dark:text-text-dark-secondary">garcia.ana@iteso.mx</p>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-lg shadow-xl p-6 md:p-8">
+<h3 class="text-xl font-bold text-iteso-blue dark:text-white mb-6">Configuración</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<h4 class="font-semibold text-lg mb-2">Preferencias</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2" for="language">
+<span class="material-symbols-outlined text-gray-600 dark:text-text-dark-secondary">language</span>
+<span>Idioma</span>
+</label>
+<select class="w-1/2 rounded-md border-gray-300 dark:border-gray-600 dark:bg-card-dark focus:border-iteso-light-blue focus:ring-iteso-light-blue text-sm" id="language" name="language">
+<option>Español</option>
+<option>English</option>
+</select>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2" for="dark-mode-toggle">
+<span class="material-symbols-outlined text-gray-600 dark:text-text-dark-secondary">brightness_4</span>
+<span>Modo Oscuro</span>
+</label>
+<label class="flex items-center cursor-pointer" for="dark-mode-toggle">
+<div class="relative">
+<input class="sr-only" id="dark-mode-toggle" type="checkbox"/>
+<div class="block bg-gray-200 dark:bg-gray-700 w-12 h-6 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-lg mb-2">Accesibilidad</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2" for="font-size">
+<span class="material-symbols-outlined text-gray-600 dark:text-text-dark-secondary">format_size</span>
+<span>Tamaño de Fuente</span>
+</label>
+<input class="w-1/2 accent-iteso-light-blue" id="font-size" max="120" min="80" type="range" value="100"/>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2" for="high-contrast">
+<span class="material-symbols-outlined text-gray-600 dark:text-text-dark-secondary">contrast</span>
+<span>Alto Contraste</span>
+</label>
+<label class="flex items-center cursor-pointer" for="high-contrast">
+<div class="relative">
+<input class="sr-only" id="high-contrast" type="checkbox"/>
+<div class="block bg-gray-200 dark:bg-gray-700 w-12 h-6 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-700 md:pl-8 pt-6 md:pt-0">
+<h4 class="font-semibold text-lg mb-4">Historial de Evaluaciones</h4>
+<div class="space-y-4 max-h-60 overflow-y-auto pr-2">
+<div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+<div>
+<p class="font-medium">Dr. Juan Pérez</p>
+<p class="text-sm text-gray-500 dark:text-text-dark-secondary">Cálculo Diferencial - Otoño 2023</p>
+</div>
+<div class="flex items-center text-amber-500">
+<span class="font-bold mr-1">4.5</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+<div>
+<p class="font-medium">Dra. María Rodríguez</p>
+<p class="text-sm text-gray-500 dark:text-text-dark-secondary">Programación Estructurada - Primavera 2023</p>
+</div>
+<div class="flex items-center text-amber-500">
+<span class="font-bold mr-1">5.0</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+<div>
+<p class="font-medium">Dr. Carlos Sánchez</p>
+<p class="text-sm text-gray-500 dark:text-text-dark-secondary">Bases de Datos - Otoño 2022</p>
+</div>
+<div class="flex items-center text-amber-500">
+<span class="font-bold mr-1">4.2</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+<div>
+<p class="font-medium">Dra. Laura Gómez</p>
+<p class="text-sm text-gray-500 dark:text-text-dark-secondary">Inteligencia Artificial - Primavera 2022</p>
+</div>
+<div class="flex items-center text-amber-500">
+<span class="font-bold mr-1">4.8</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 flex justify-end">
+<button class="w-full sm:w-auto flex justify-center py-2 px-6 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-iteso-blue hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-iteso-light-blue">
+              Guardar Cambios
+            </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-iteso-blue text-white mt-auto">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-sm">
+        © 2024 ITESO, Universidad Jesuita de Guadalajara. Todos los derechos reservados.
+      </div>
+</footer>
+</div>
+<style>
+  input[type="checkbox"]:checked ~ .dot {
+    transform: translateX(1.5rem);
+    background-color: #00B5E2;
+  }
+</style>
+
+</body></html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Perfil del Profesor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                        "iteso-light-blue": "#00B5E2",
+                        "background-dark": "#121212"
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+        .star-rating .material-icons {
+            font-size: 2rem;
+            color: #d1d5db;
+            cursor: pointer;
+        }
+        .star-rating input[type="radio"]:checked~.material-icons {
+            color: #f59e0b;
+        }
+        .star-rating:hover .material-icons {
+            color: #f59e0b;
+        }
+        .star-rating .material-icons:hover~.material-icons {
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-background-dark">
+<div class="min-h-screen bg-white dark:bg-gray-900">
+<header class="bg-iteso-blue text-white shadow-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<img alt="ITESO Logo" class="h-10 w-auto mr-4" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_ITESO_normal.jpg"/>
+<h1 class="text-xl font-bold hidden md:block">Evaluación de Profesores</h1>
+</div>
+<div class="flex items-center space-x-4">
+<button class="flex items-center text-white hover:text-iteso-light-blue transition">
+<span class="material-icons mr-2">arrow_back</span>
+                            Regresar
+                        </button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 space-y-8">
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">
+<img alt="Foto de perfil del profesor" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-iteso-blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZ8qAXV7WUMI-FN22BAYJapD-UAuKqvaIm36CCt-0YD-mH1H8W2xintxf6EgvcJr3Lp0nQoIQZ07eXjLJD2KxxzDAl5QZBbdzOiNuyIjJMkFcJBWnu9r1na2aUKQSBLwUJ18XxcHrJoWjeDRDXJe-zJa04IeRLBK9JqL960qW5nMYSh7B68OduOb_3xz1MJQwpXycnd2wLqv7G2mY9aq9WjAoF4HigAisTmsVRxiP-CfVvmdPfGxKmpTlI4QYAuoLX0lPPAQCcAw"/>
+<h2 class="text-2xl font-bold text-iteso-blue dark:text-white">Dr. Juan Pérez</h2>
+<p class="text-gray-600 dark:text-gray-400">Departamento de Electrónica, Sistemas e Informática</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+<h3 class="text-xl font-bold text-iteso-blue dark:text-white mb-4">Información General</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-gray-700 dark:text-gray-300">Cursos que imparte:</h4>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
+<li>Programación Orientada a Objetos</li>
+<li>Bases de Datos</li>
+<li>Ingeniería de Software</li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-gray-700 dark:text-gray-300">Trayectoria Profesional:</h4>
+<p class="text-gray-600 dark:text-gray-400">Más de 15 años de experiencia en desarrollo de software y gestión de proyectos tecnológicos. Ha trabajado en empresas como Intel y HP.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-700 dark:text-gray-300">Publicaciones Recientes:</h4>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
+<li>"Inteligencia Artificial Aplicada" (2023)</li>
+<li>"Arquitecturas de Microservicios" (2021)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+<div class="flex flex-col sm:flex-row items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-iteso-blue dark:text-white">Calificaciones y Comentarios</h3>
+<div class="flex items-center mt-4 sm:mt-0">
+<span class="text-yellow-500 font-bold text-2xl mr-2">4.8</span>
+<div class="flex text-yellow-500">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star_half</span>
+</div>
+<span class="text-gray-500 dark:text-gray-400 ml-2">(125 evaluaciones)</span>
+</div>
+</div>
+<div class="mt-6">
+<button class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-iteso-light-blue hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-iteso-light-blue transition">
+<span class="material-icons mr-2">rate_review</span>
+                                Evaluar Profesor
+                            </button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Comentarios de Alumnos</h4>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<img alt="" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKDpEqt28p2H-6zH6u-tSWCSOEwOjNz15sLBQd3KWxSSObsOrbXcfpUn0wQg9TOqf5c3p95PF8awcYlL5BoZ0JpDK6_WwwTKtYVgBSfSidgpRRZoGfTtKFp9BRDpD8fx-AjO9_LN7-nXSCXlIB8yM9GGmyz34Dlnrf9U0TOxxTUY8JYwkLhuG9-B0INcQ8PAE7BP81nS55lXlhmFvWD9D6H4KzdBKErGLvE5zIRaNddAA6IAOUnbdNjfBn90MAEr0uB66StgT8tY"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="font-semibold text-gray-700 dark:text-gray-300">Ana Sofía R.</p>
+<div class="flex text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 mt-1">"¡Excelente profesor! Explica los temas con mucha claridad y siempre está dispuesto a ayudar. Sus clases son muy dinámicas."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Hace 2 semanas</p>
+</div>
+</div>
+<hr class="dark:border-gray-700"/>
+<div class="flex items-start space-x-4">
+<img alt="" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKDpEqt28p2H-6zH6u-tSWCSOEwOjNz15sLBQd3KWxSSObsOrbXcfpUn0wQg9TOqf5c3p95PF8awcYlL5BoZ0JpDK6_WwwTKtYVgBSfSidgpRRZoGfTtKFp9BRDpD8fx-AjO9_LN7-nXSCXlIB8yM9GGmyz34Dlnrf9U0TOxxTUY8JYwkLhuG9-B0INcQ8PAE7BP81nS55lXlhmFvWD9D6H4KzdBKErGLvE5zIRaNddAA6IAOUnbdNjfBn90MAEr0uB66StgT8tY"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="font-semibold text-gray-700 dark:text-gray-300">Carlos M.</p>
+<div class="flex text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm text-gray-300">star_border</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 mt-1">"Buen profesor, domina los temas. A veces avanza un poco rápido, pero si le preguntas, vuelve a explicar sin problema."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Hace 1 mes</p>
+</div>
+</div>
+<hr class="dark:border-gray-700"/>
+<div class="flex items-start space-x-4">
+<img alt="" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKDpEqt28p2H-6zH6u-tSWCSOEwOjNz15sLBQd3KWxSSObsOrbXcfpUn0wQg9TOqf5c3p95PF8awcYlL5BoZ0JpDK6_WwwTKtYVgBSfSidgpRRZoGfTtKFp9BRDpD8fx-AjO9_LN7-nXSCXlIB8yM9GGmyz34Dlnrf9U0TOxxTUY8JYwkLhuG9-B0INcQ8PAE7BP81nS55lXlhmFvWD9D6H4KzdBKErGLvE5zIRaNddAA6IAOUnbdNjfBn90MAEr0uB66StgT8tY"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="font-semibold text-gray-700 dark:text-gray-300">Mariana G.</p>
+<div class="flex text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 mt-1">"Sus ejemplos prácticos son lo mejor para entender la teoría. Lo recomiendo totalmente."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Hace 3 meses</p>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<a class="text-iteso-light-blue hover:text-iteso-blue font-medium transition" href="#">Ver todos los comentarios</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<style>
+		body {
+			background: #fff;
+			margin: 0;
+			height: 100vh;
+		}
+		.header{
+			background-color: greenyellow;
+			width: 90%;
+			left: 0%;
+		}
+		.ads{
+			background-color: aqua;
+
+			width: 10%;
+			left: 1000px;
+			
+		}
+		.nav{
+			background-color: blueviolet;
+
+			height: 100%;
+			width: 20%;
+		}
+		.article{
+			background-color: coral;
+
+			height: 90%;
+			width: 100%;
+			right: 100%;
+		}
+		.foder{
+			background-color: black;
+			color: violet;
+			height: 10%;
+			width: 100%;
+			top: 90%;
+			
+		}
+	</style>
+</head>
+<body>
+	<div style="display: flex; height: 10vh; ">
+	<div class="header">
+		<p>Header</p>
+	</div>
+	<div class="ads">
+		<p>Ads</p>
+	</div>
+	</div>
+	<div style="display: flex; height: 90vh;width: 100%;">
+		<div class="nav"><p>Nav</p></div>
+		<div style="display: flex; flex-direction: column; width: 80%;">
+			<div class="article"><p>Article</p></div>
+			<div class="foder"><p>Footer</p></div>
+		</div>
+	</div>
+</body>
+</html>	

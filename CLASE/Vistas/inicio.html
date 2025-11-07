@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Departamentos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00B5E2",
+                        "background-light": "#F7F7F7",
+                        "background-dark": "#121212",
+                        "iteso-blue": "#002D5A"
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="min-h-screen flex flex-col">
+<header class="bg-iteso-blue text-white shadow-md sticky top-0 z-10">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-center py-3">
+<button>
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="flex-grow flex justify-center">
+<img alt="ITESO Logo" class="h-8 w-auto" src="https://oci02.img.iteso.mx/Identidades-De-Instancia/ITESO/Logos%20ITESO/Logo-ITESO-Principal-FondoAzul.png"/>
+</div>
+<button>
+<span class="material-icons">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-8">
+<h1 class="text-2xl font-bold text-iteso-blue dark:text-primary mb-6">Departamentos</h1>
+<div class="mb-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<div class="flex items-center space-x-2 w-full sm:w-auto">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="sort-by">Ordenar por:</label>
+<select class="form-select rounded-lg border-gray-300 dark:bg-zinc-700 dark:border-zinc-600 dark:text-white text-sm" id="sort-by">
+<option>Nombre</option>
+<option>Profesores</option>
+<option>Cursos Activos</option>
+<option>Estudiantes</option>
+</select>
+</div>
+<div class="flex items-center space-x-2 w-full sm:w-auto">
+<label class="sr-only" for="search-departments">Buscar departamentos</label>
+<div class="relative w-full">
+<input class="form-input w-full rounded-lg pl-10 pr-4 py-2 border-gray-300 dark:bg-zinc-700 dark:border-zinc-600 dark:text-white text-sm" id="search-departments" placeholder="Buscar departamento..." type="text"/>
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Grupo de estudiantes de humanidades al aire libre" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgVBLo_NuPud8U-qoxSg1rdHAtaQjD_G_1XBqDFY0bIdnQboPZMXFYN7n88FlIIsBwnAp_yjyP80RC0cNbAtsqWqzVVZr2CUPoM92ZsFv_aPODQzX3YuI3NpdwbV-aQE70JjEddU9rWsy2zWD_yRvsSPL3Zfyqi8CevB6t_JrxHOBJ8nCLi001ITK3foJ4m1p05HEUVdcFtHcxxBQSM0whxK2RkKB-0DqdoR0F0A7VHIZ7UGl0RhPB69Cdzo40kMMqbNrFyHdAmgA"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Humanidades</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">45</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">60</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">1200</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Personas en un entorno de oficina moderno colaborando" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9F5JL67LeW__pZE4DSG-2TAzcjDbKkcHNpsuTVHnnNv-NzC_QkD8oszZeQJ64qxhIjRsMtAadBMPLbDIRRjmVY534XS8Td8pCNrjfPbJU_mEoaFgHd8idcmqWffWNYSfG89bggiaRpuxgEic6_MAslZIWra8oDtQ40YLqVb1YpfE4thBlpsJW_P9oYJatudZVjc88Qc921gBbP5SvisvRK_AJ7H1iadADR0Lb6qlCIyX6fsu7TVw7O74NyaH8FWQa_S3_sAcJufM"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Ingenierías</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">78</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">110</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">2500</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Equipo de negocios trabajando juntos en una laptop" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSu7YzA75AOCIFit5pI0vQL91quqV0UxbOAPtUU4oFqg-kUe4fMeX-wpZ8uUPPhjXZxbJgsuKBWGDKuD3HJHXc736UVRMU78cI9XXoFEGilT0svztKp7y2S9XEgkF1menAPkhQaB-9dYAPc3X7qiYCi_L8QlTOfC6BgZoKjUi1CcuzngcsKyv-8GWs7VKBIS0fIELMnWTIk02Y_BfDOub-5eP9nQgcttAxqDdK5Whj1uOIPnLqV2XgFtcDko4j7SC8m1RDfiBvvHs"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Negocios</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">62</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">95</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">1800</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Estudiantes en un laboratorio de ciencias" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQveSjIrZszJHYbN7-iP5APF_-x4tt0z1CCwou8moWMf-C2AH9Uo0A7KavSu-UdpQ-G8cCZC19iWakal01gPucaZys0ur_oe0aO7-8c95a5OBZX9QAP2Zj_a8esfVZYnIGNqz_BOYqaN4LWdDKjBoNy-ZPLEYULxvE5v4mKc-hM2YOHs5TAaBN0THbRKbqMV1cZ3UhPyQtYBvf7Uz7JNV88kU1Xyj91HSAwk_CxlhQNuF1SByRUlEIUNA3i64eVMavBtO3xYd7bWM"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Ciencias de la Salud</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">30</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">40</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">900</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Estudiantes en una biblioteca moderna" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcMAqXDY-rzcU6q6xQMa59vLkvQ9ohvkMkfsOm38UxgG9hj9iFRDHne9rsvVmxZ7sUyRmiJGvn_akoytEn6NEYfLd7UVLHPTdr-TzrU9WSsVmVE_RjYAf2mfXuiWxpMPhiyR-qgxHTcXtdkfOAA8eluADG4KejwxduWjjGEtbI1b834qjcs7MYTWcwE48pOWDRG2VCBXEQM7xu5mNfTIpP9ZPkXzMTkwSN-NCGlP-PaMtKuQEdc1QfCp0yqDTJi57zfwcvze6ndFI"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Ciencias Sociales</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">50</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">70</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">1500</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+<div class="relative h-32">
+<img alt="Grupo de estudiantes en un laboratorio de cómputo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD37SV5M7-dKyLOO5J7ZPEZuGBNBBc_THDvNEf8Yg-bWWnC37g-pAWBMXslC5wLdeXBBjG1ucOwsZF7dhpKMWg-Dx5Pb7ffoeHKBcAKHXQnuoDsD-pWg6HtoPFCMDSy66RjMki7AEfKD1y5geXk5kCJNzXWaxWwLhnHt32L9_XYVIj2JNDjKGNNAVG9Q5CBNrrRQKyL2FxbPEEf77aWEjrhl6UcYShZFu8AQp0S4-b2xGOE8FozhXBIRslJGn_yaPZfTqKyKoAvaC0"/>
+<h3 class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 text-white text-center py-2 text-lg font-semibold">Diseño y Comunicación</h3>
+</div>
+<div class="p-4 flex-grow text-gray-700 dark:text-gray-300 text-sm">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">person</span>
+<span>Profesores: <strong class="font-medium">38</strong></span>
+</div>
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">school</span>
+<span>Cursos Activos: <strong class="font-medium">55</strong></span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2 text-lg">group</span>
+<span>Estudiantes: <strong class="font-medium">1050</strong></span>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-zinc-700 flex justify-end space-x-2">
+<button class="bg-iteso-blue text-white px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-iteso-blue/90 transition-colors">
+<span class="material-symbols-outlined text-base">group</span>
+<span>Ver Facultad</span>
+</button>
+<button class="bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Generar Reporte</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

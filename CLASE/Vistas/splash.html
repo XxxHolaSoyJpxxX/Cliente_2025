@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Splash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+     
+    </script>
+</head>
+<body class="bg-iteso-blue">
+<div class="min-h-screen flex items-center justify-center">
+<div class="w-full max-w-md px-8 py-10">
+<div class="flex justify-center">
+<img alt="ITESO Logo" class="h-40 w-auto animate-spin-slow" src="https://i.pinimg.com/474x/bb/e1/72/bbe17265ca5e42ee72ba3c0719d51175.jpg"/>
+</div>
+</div>
+</div>
+
+</body></html>

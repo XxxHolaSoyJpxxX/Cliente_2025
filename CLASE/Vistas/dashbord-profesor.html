@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Dashboard del Profesor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                        "iteso-light-blue": "#00B5E2",
+                        "background-dark": "#121212",
+                        "card-dark": "#1E1E1E",
+                        "text-dark": "#E0E0E0"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-background-dark text-gray-800 dark:text-text-dark font-sans">
+<div class="min-h-screen flex flex-col">
+<header class="bg-white dark:bg-card-dark shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<img alt="ITESO Logo" class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_ITESO_normal.jpg"/>
+<span class="ml-3 text-lg font-bold text-iteso-blue dark:text-white">Portal Profesor</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-gray-500 dark:text-gray-400 hover:text-iteso-blue dark:hover:text-white">
+<span class="material-symbols-outlined">
+                                dark_mode
+                            </span>
+</button>
+<div class="relative">
+<button class="flex items-center space-x-2">
+<img alt="User profile" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinadC7hOsf6x5leZr0aSnG2QyPo-K_gcEHzY4FIzB6Y2vFl0C_8K1yPblMRFcavAtEJxr3ujb6Ws-xvUNGLaQ0NhNjRWy8mq2X9O3NAO-jMvFiz5PV_BZ3t8TYGV21zfsSe2aJ3hymP_7Lc9jAGC-jjjNo8-sxpwX8AAA9R2_XafxN1dDIYPB5bvmPM8eA5WWSnCurFordUR1fOCwuzhRmg9H2VEBDh1nuq66VXr3sm82WBNT_P7mNXeMUmoBQ4s6xplKBrUpOGY"/>
+<span class="hidden md:inline font-medium">Dr. Juan Carlos Pérez</span>
+<span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+</button>
+<div class="absolute right-0 mt-2 w-48 bg-white dark:bg-card-dark rounded-md shadow-lg py-1 hidden">
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Mi Perfil</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Configuración</a>
+<a class="block px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Cerrar Sesión</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-3xl font-bold text-iteso-blue dark:text-white mb-6">Dashboard del Profesor</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex flex-col items-center justify-center">
+<h2 class="text-xl font-semibold mb-2">Calificación General</h2>
+<div class="flex items-baseline">
+<span class="text-5xl font-bold text-iteso-blue dark:text-iteso-light-blue">4.7</span>
+<span class="text-2xl text-gray-500 dark:text-gray-400">/ 5</span>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500 mt-2">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex flex-col items-center justify-center">
+<h2 class="text-xl font-semibold mb-2">Total de Evaluaciones</h2>
+<span class="text-5xl font-bold text-iteso-blue dark:text-iteso-light-blue">124</span>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Primavera 2024</p>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex flex-col items-center justify-center">
+<h2 class="text-xl font-semibold mb-2">Nuevos Comentarios</h2>
+<span class="text-5xl font-bold text-iteso-blue dark:text-iteso-light-blue">15</span>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Esta semana</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2 text-iteso-blue dark:text-iteso-light-blue">comment</span>
+                            Comentarios Recientes de Estudiantes
+                        </h2>
+<div class="space-y-4 max-h-96 overflow-y-auto pr-2">
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="font-semibold">Ingeniería de Software II</p>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<p class="text-gray-700 dark:text-gray-300">"Excelente profesor, explica muy claro y sus clases son muy dinámicas. Los proyectos fueron retadores pero aprendí muchísimo."</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-right">Hace 2 días</p>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="font-semibold">Bases de Datos Avanzadas</p>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base text-gray-400">star</span>
+</div>
+</div>
+<p class="text-gray-700 dark:text-gray-300">"El profesor tiene un gran conocimiento del tema, pero a veces avanza muy rápido. Sería bueno tener más ejemplos prácticos."</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-right">Hace 1 semana</p>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="font-semibold">Ingeniería de Software II</p>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+</div>
+</div>
+<p class="text-gray-700 dark:text-gray-300">"Muy buen curso. El material es muy completo y el profesor siempre está dispuesto a resolver dudas."</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-right">Hace 2 semanas</p>
+</div>
+</div>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:hover:text-white mt-4 inline-block" href="#">Ver todos los comentarios...</a>
+</div>
+<div class="space-y-6">
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Acciones Rápidas</h2>
+<ul class="space-y-3">
+<li>
+<a class="flex items-center p-3 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-iteso-light-blue hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-iteso-blue dark:text-iteso-light-blue group-hover:text-white">person</span>
+<span class="font-medium">Ver mi Perfil Público</span>
+</a>
+</li>
+<li>
+<a class="flex items-center p-3 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-iteso-light-blue hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-iteso-blue dark:text-iteso-light-blue group-hover:text-white">list_alt</span>
+<span class="font-medium">Consultar Evaluaciones</span>
+</a>
+</li>
+<li>
+<a class="flex items-center p-3 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-iteso-light-blue hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-iteso-blue dark:text-iteso-light-blue group-hover:text-white">account_circle</span>
+<span class="font-medium">Editar Perfil de Usuario</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Calificación por Criterio</h2>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-medium">Claridad</span>
+<div class="flex items-center space-x-2">
+<div class="w-32 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+<div class="h-2 bg-green-500 rounded-full" style="width: 95%"></div>
+</div>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Puntualidad</span>
+<div class="flex items-center space-x-2">
+<div class="w-32 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+<div class="h-2 bg-green-500 rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-sm font-bold">5.0</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Conocimiento</span>
+<div class="flex items-center space-x-2">
+<div class="w-32 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+<div class="h-2 bg-yellow-500 rounded-full" style="width: 88%"></div>
+</div>
+<span class="text-sm font-bold">4.4</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Actitud</span>
+<div class="flex items-center space-x-2">
+<div class="w-32 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+<div class="h-2 bg-green-500 rounded-full" style="width: 92%"></div>
+</div>
+<span class="text-sm font-bold">4.6</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

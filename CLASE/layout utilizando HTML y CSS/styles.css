@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	height: 100vh;
+}
+
+div {
+	display: flex;	
+	width: 100%;
+	border: 1px solid rgb(0, 0, 0);
+}
+
+.header {
+	height: 80px;
+	width: 100%;
+	background-color: #bf8600;
+	justify-content: center;     
+    align-items: center;         
+}
+
+.sidenav{
+	width: 200px;
+	height: calc(100vh - 80px);
+	background-color:#0648C2 ;
+	justify-content: center;     
+    align-items: center;  
+}
+
+.content{
+	height: 100%;
+	width: 33.333%;
+	justify-content: center;     
+    align-items: center;  
+}
+
+#id1{
+	background-color:#2B6457 ;
+}
+#id2{
+	background-color: #3988C2;
+}
+#id3{
+	background-color: #A8BCD6;
+}
+

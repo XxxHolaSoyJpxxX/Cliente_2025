@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Dashboard del Estudiante</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                        "iteso-light-blue": "#00B5E2",
+                        "background-dark": "#121212",
+                        "card-dark": "#1E1E1E",
+                        "text-dark": "#E0E0E0"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+      }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-background-dark text-gray-800 dark:text-text-dark font-sans">
+<div class="min-h-screen flex flex-col">
+<header class="bg-white dark:bg-card-dark shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<img alt="ITESO Logo" class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_ITESO_normal.jpg"/>
+<span class="ml-3 text-lg font-bold text-iteso-blue dark:text-white">Portal Estudiante</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-gray-500 dark:text-gray-400 hover:text-iteso-blue dark:hover:text-white">
+<span class="material-symbols-outlined">
+                                dark_mode
+                            </span>
+</button>
+<div class="relative">
+<button class="flex items-center space-x-2">
+<img alt="User profile" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB90Xu0X_DHAs4DtA-hy7Ik0WEYmYWy0UbiLcZdHSLYt177AiRBc5KVkABiueGvlDpS53Cc9c06S_WOQXXYXbYPYvDDrl_CIPZYJDQxibr_okFnL8iAQG6Hf43MI5jHUvlnf2A5pgChF3ysf3hjRQHAK6Mhb-rrCHv8lFxd0rIzewAhcDR4uTSyBsw839p960g0-0oWJbInT8kioenxF0YdK7-DKu8Hi9jAz1Far5IPZfkEpvopIgJwWobwxVFN9G0gGX_74swSA04"/>
+<span class="hidden md:inline font-medium">Juan Pérez</span>
+<span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+</button>
+<div class="absolute right-0 mt-2 w-48 bg-white dark:bg-card-dark rounded-md shadow-lg py-1 hidden">
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Mi Perfil</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Configuración</a>
+<a class="block px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Cerrar Sesión</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-3xl font-bold text-iteso-blue dark:text-white mb-6">Dashboard del Estudiante</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="md:col-span-2 bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Buscar Profesor</h2>
+<div class="relative">
+<input class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-iteso-light-blue bg-gray-50 dark:bg-gray-700" placeholder="Nombre del profesor o materia..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                search
+                            </span>
+</div>
+</div>
+<div class="bg-iteso-blue text-white p-6 rounded-lg shadow flex flex-col items-center justify-center text-center hover:bg-opacity-90 transition-colors">
+<h2 class="text-xl font-semibold mb-2">¿Listo para calificar?</h2>
+<p class="mb-4">Tu opinión es importante para la comunidad ITESO.</p>
+<button class="bg-iteso-light-blue text-iteso-blue font-bold py-2 px-6 rounded-full flex items-center space-x-2">
+<span class="material-symbols-outlined">
+                                edit
+                            </span>
+<span>Evaluar Profesor</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2 text-iteso-blue dark:text-iteso-light-blue">history</span>
+                            Historial de Evaluaciones
+                        </h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div>
+<p class="font-semibold">Dr. Juan Carlos Pérez</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Ingeniería de Software II - Primavera 2024</p>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base text-gray-400">star_half</span>
+<span class="text-gray-800 dark:text-gray-300 font-bold ml-2">4.5</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div>
+<p class="font-semibold">Mtra. Ana Sofía Ramírez</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Bases de Datos - Otoño 2023</p>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="text-gray-800 dark:text-gray-300 font-bold ml-2">5.0</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div>
+<p class="font-semibold">Dr. Miguel Hernández</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Cálculo Diferencial - Primavera 2023</p>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base text-gray-400">star</span>
+<span class="material-symbols-outlined text-base text-gray-400">star</span>
+<span class="text-gray-800 dark:text-gray-300 font-bold ml-2">3.0</span>
+</div>
+</div>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:hover:text-white mt-4 inline-block" href="#">Ver historial completo...</a>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2 text-iteso-blue dark:text-iteso-light-blue">recommend</span>
+                            Recomendaciones para ti
+                        </h2>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<img alt="Professor" class="h-12 w-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinadC7hOsf6x5leZr0aSnG2QyPo-K_gcEHzY4FIzB6Y2vFl0C_8K1yPblMRFcavAtEJxr3ujb6Ws-xvUNGLaQ0NhNjRWy8mq2X9O3NAO-jMvFiz5PV_BZ3t8TYGV21zfsSe2aJ3hymP_7Lc9jAGC-jjjNo8-sxpwX8AAA9R2_XafxN1dDIYPB5bvmPM8eA5WWSnCurFordUR1fOCwuzhRmg9H2VEBDh1nuq66VXr3sm82WBNT_P7mNXeMUmoBQ4s6xplKBrUpOGY"/>
+<div>
+<p class="font-semibold">Dra. Laura Gómez</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Departamento de Electrónica, Sistemas e Informática</p>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:hover:text-white" href="#">Ver perfil</a>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<img alt="Professor" class="h-12 w-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAfwSahsRINWCQJhD7K9KFZctf3XkgZmR3-NsnQAK6FaKZlt86Qsk6Oh5T0lFyb1mBi_jjFkRxvp-sdX8D4aEBGbhXP_ZWJkCu5RbCFOI7Wc_ee1tOB9_yPQ1PXld-T8sCCjxR6ztVFSI-iv5BoRye431RiN66OTsTxn2PmMoIVRuvZaGyaVr8qCF_t3YLOfkcJnH35JRJuKBjverEyHkC2g2FenTywG3LxgyjFUwkwXzaAq1gTJRA7kUqKjee3UMGepfZzjndwM0"/>
+<div>
+<p class="font-semibold">Dr. Carlos Mendoza</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Departamento de Procesos Tecnológicos e Industriales</p>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:hover:text-white" href="#">Ver perfil</a>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<img alt="Professor" class="h-12 w-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvbrCsLAA0EuZxvHmpv4l6UKVbj-eoSyUFjmJfExPeamS6Y8LnrDmkA3vqRG5El4gWt7GCyIIpNr_rPNAJ6SGCC3yJVyGdYFAmSex53zZ9l2CUR7pjk2Nby77wzqIRy7RuDDnw1RViR6DDpynAxg1OTzk_iUcZc37eExluO_xALTwsJH-UuLt3lpBot1dgKsl2XDRq2KZ2Wrlytxj1zHTO6rmyiWI6HhkwG57ScIsAp4GeU1f2mXAII1WLHg45MP18MmpUpvfrYCk"/>
+<div>
+<p class="font-semibold">Mtra. Verónica Diaz</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Departamento de Psicología, Educación y Salud</p>
+<a class="text-sm font-medium text-iteso-light-blue hover:text-iteso-blue dark:hover:text-white" href="#">Ver perfil</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

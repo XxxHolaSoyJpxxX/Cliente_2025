@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Cerrar Sesión</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                        "iteso-light-blue": "#00B5E2"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-iteso-blue">
+<div class="min-h-screen flex flex-col items-center justify-center">
+<div class="w-full max-w-md px-8 py-10">
+<div class="bg-white rounded-lg shadow-xl p-8 text-center">
+<div class="mb-6">
+<span class="material-symbols-outlined text-6xl text-iteso-blue">
+                        logout
+                    </span>
+</div>
+<h1 class="text-2xl font-bold text-iteso-blue mb-4">Cerrar Sesión</h1>
+<p class="text-gray-600 mb-8">¿Estás seguro de que deseas cerrar tu sesión?</p>
+<div class="flex justify-center space-x-4">
+<a class="w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-iteso-light-blue" href="#">
+                        Cancelar
+                    </a>
+<a class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-iteso-blue hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-iteso-light-blue" href="login.html">
+                        Confirmar
+                    </a>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

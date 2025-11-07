@@ -1,0 +1,25 @@
+html{
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,h2{
+	width: 50%;
+	font-style: normal;
+	color: aqua;
+	float: left;
+}
+h2{
+	clear: both;
+}
+span{
+	display: block;
+}
+
+.fila::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

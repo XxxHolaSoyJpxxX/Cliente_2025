@@ -1,0 +1,36 @@
+@use "colors";
+@use "login";
+@use "_buttons";
+
+html{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+}
+button {
+	color: white;
+ 	background-color: colors.$prymary-color,
+	
+}
+
+header {
+	height: 80px;
+	background-color: colors.$prymary-color
+}
+
+
+section{
+	font-family: 'Times New Roman', Times, serif;
+	max-width: 800px;
+	margin: auto;
+	padding: auto;
+	color: brown;
+	display:flex;
+	
+}
+$posicion: "top";
+
+.estilo{
+	margin:#{$posicion} 20px;
+}

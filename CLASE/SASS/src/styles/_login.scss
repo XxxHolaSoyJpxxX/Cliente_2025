@@ -1,0 +1,8 @@
+@use "colors";
+
+form{
+button.btn-secondary{
+	background-color:colors.$secundary-color;
+}
+
+};

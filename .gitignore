@@ -1,0 +1,108 @@
+# =======================================
+# GLOBAL .gitignore para varios proyectos Angular/TypeScript
+# =======================================
+
+# Compilación y builds (en cualquier carpeta)
+**/dist/
+**/build/
+**/out-tsc/
+**/tmp/
+**/temp/
+**/.angular/
+**/.angular/cache/
+
+# Dependencias
+**/node_modules/
+**/jspm_packages/
+
+# Archivos de entorno
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Cobertura de pruebas
+**/coverage/
+**/lcov-report/
+
+# Archivos de logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+**/*.log
+
+# TypeScript
+**/*.tsbuildinfo
+
+# Archivos generados por Angular compiler
+**/*.ngfactory.ts
+**/*.ngsummary.json
+
+# IDEs y editores
+.vscode/
+.idea/
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+**/.DS_Store
+**/Thumbs.db
+**/ehthumbs.db
+**/Desktop.ini
+**/Icon?
+
+# Archivos temporales y backups
+**/*.tmp
+**/*.bak
+**/*.orig
+**/*.swp
+**/*.swo
+**/*~
+
+# Cachés y stores
+**/.npm/
+**/.yarn/
+**/.pnpm-store/
+**/.cache/
+
+# ESLint / Prettier cache
+**/.eslintcache
+**/.prettiercache
+
+# E2E tests (Cypress / Playwright)
+**/cypress/videos/
+**/cypress/screenshots/
+**/playwright-report/
+**/test-results/
+
+# Storybook
+**/storybook-static/
+
+# NX / Monorepo tools
+**/nx-out/
+**/.nx/
+**/.turbo/
+
+# Archivos comprimidos o paquetes
+**/*.tgz
+**/*.zip
+**/*.tar.gz
+
+# Otros posibles archivos locales
+**/*.pid
+**/*.seed
+**/*.pid.lock
+
+# Firebase / AWS / otras integraciones locales
+**/.firebase/
+**/.aws/
+
+# Reportes o dumps
+**/reports/
+**/junit/
+
+# =======================================
+# Fin del archivo
+# =======================================

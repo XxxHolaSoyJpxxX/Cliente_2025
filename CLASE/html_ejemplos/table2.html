@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		main {
+			width: 100%;
+			max-width: 1000px;
+			background-color: lightblue;
+			margin: 0 auto;
+		}
+
+		table {
+			width: 100%;
+			border: 1px solid black;
+		}
+
+		table>tbody>tr:nth-child(2n+1) {
+			background-color: gray;
+			color: white;
+		}
+		table>tbody>tr>td:hover{
+			background-color: blue;
+			color: greenyellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+
+		<table>
+			<thead>
+
+				<tr>
+					<td>Id</td>
+					<td colspan="2">Nombre</td>
+					<td>Correo</td>
+					<td>Telefono</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					<td>celda5</td>
+				</tr>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					<td>celda5</td>
+				</tr>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					<td>celda5</td>
+				</tr>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					<td>celda5</td>
+				</tr>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					<td rowspan="2">celda5</td>
+				</tr>
+				<tr>
+					<td>celda1</td>
+					<td>celda2</td>
+					<td>celda3</td>
+					<td>celda4</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</main>
+</body>
+
+</html>

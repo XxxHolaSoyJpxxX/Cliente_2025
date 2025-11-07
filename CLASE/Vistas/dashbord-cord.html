@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITESO - Dashboard del Coordinador</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "iteso-blue": "#002D5A",
+                        "iteso-light-blue": "#00B5E2",
+                        "background-dark": "#121212",
+                        "card-dark": "#1E1E1E",
+                        "text-dark": "#E0E0E0"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-background-dark text-gray-800 dark:text-text-dark font-sans">
+<div class="min-h-screen flex flex-col">
+<header class="bg-white dark:bg-card-dark shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<img alt="ITESO Logo" class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_ITESO_normal.jpg"/>
+<span class="ml-3 text-lg font-bold text-iteso-blue dark:text-white">Portal Coordinador</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-gray-500 dark:text-gray-400 hover:text-iteso-blue dark:hover:text-white">
+<span class="material-symbols-outlined">
+                                dark_mode
+                            </span>
+</button>
+<div class="relative group">
+<button class="flex items-center space-x-2">
+<img alt="User profile" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsWcU83zqRguIpKlW-SPR4R8G5A5JP00cPsnuZn4jE3D3mzu6MvyiR-lE4grdnSWBnIK3QnCWbJM_K-nkR52LgjYPHXNIh9tGDg_Q-fNyZlm6uyCA_4uQeOjyOppanpb6PDxYR8OfROWq_PumVYCS1lSZ7mxsQCQ2dSsE0RMw9-G4-H4KOaiLVNYKubiUosZpwcXbJ7x86f40agxF5RzGhb10ZWT-jb1R2K6zo3W4dOngVtavZVXP8xJefUW9mp6amwNKLoqEKIis"/>
+<span class="hidden md:inline font-medium">Dr. Ricardo Zermeño</span>
+<span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+</button>
+<div class="absolute right-0 mt-2 w-48 bg-white dark:bg-card-dark rounded-md shadow-lg py-1 hidden group-hover:block">
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Mi Perfil</a>
+<a class="block px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Cerrar Sesión</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-3xl font-bold text-iteso-blue dark:text-white mb-6">Dashboard del Coordinador</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex items-center space-x-4">
+<div class="p-3 rounded-full bg-iteso-light-blue/20 text-iteso-light-blue">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<p class="text-gray-600 dark:text-gray-400">Promedio General</p>
+<p class="text-2xl font-bold">4.6/5.0</p>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex items-center space-x-4">
+<div class="p-3 rounded-full bg-green-500/20 text-green-500">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<div>
+<p class="text-gray-600 dark:text-gray-400">Total Profesores</p>
+<p class="text-2xl font-bold">58</p>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex items-center space-x-4">
+<div class="p-3 rounded-full bg-yellow-500/20 text-yellow-500">
+<span class="material-symbols-outlined text-3xl">rate_review</span>
+</div>
+<div>
+<p class="text-gray-600 dark:text-gray-400">Evaluaciones Totales</p>
+<p class="text-2xl font-bold">1,245</p>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow flex items-center space-x-4">
+<div class="p-3 rounded-full bg-purple-500/20 text-purple-500">
+<span class="material-symbols-outlined text-3xl">comment</span>
+</div>
+<div>
+<p class="text-gray-600 dark:text-gray-400">Comentarios Recibidos</p>
+<p class="text-2xl font-bold">897</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
+<div class="lg:col-span-3 bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Distribución de Calificaciones</h2>
+<div class="h-80">
+<canvas id="ratingsChart"></canvas>
+</div>
+</div>
+<div class="lg:col-span-2 bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Sentimiento de Comentarios</h2>
+<div class="h-80">
+<canvas id="sentimentChart"></canvas>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Comentarios Recientes de Alumnos</h2>
+<div class="space-y-4 max-h-96 overflow-y-auto">
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center mb-2">
+<p class="font-semibold text-green-500">Positivo</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 ml-auto">Hace 2 horas</p>
+</div>
+<p class="text-sm">"La Dra. Gómez es una excelente profesora, sus clases son muy claras y dinámicas. Aprendí muchísimo."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Profesor: Dra. Laura Gómez</p>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center mb-2">
+<p class="font-semibold text-yellow-500">Neutral</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 ml-auto">Hace 1 día</p>
+</div>
+<p class="text-sm">"El curso es interesante pero a veces el ritmo es un poco rápido. Se podría mejorar la organización del material."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Profesor: Dr. Carlos Mendoza</p>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center mb-2">
+<p class="font-semibold text-red-500">Negativo</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 ml-auto">Hace 3 días</p>
+</div>
+<p class="text-sm">"El profesor Hernández llega tarde con frecuencia y sus explicaciones no son claras. Es difícil seguir la clase."</p>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-2">Profesor: Dr. Miguel Hernández</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-lg shadow">
+<h2 class="text-xl font-semibold mb-4">Accesos Directos</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<a class="block bg-iteso-blue hover:bg-opacity-90 text-white p-6 rounded-lg shadow transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-4xl mb-2">list_alt</span>
+<p class="font-semibold">Listado de Profesores</p>
+</a>
+<a class="block bg-iteso-light-blue hover:bg-opacity-90 text-iteso-blue p-6 rounded-lg shadow transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-4xl mb-2">grading</span>
+<p class="font-semibold">Listado de Evaluaciones</p>
+</a>
+</div>
+<h2 class="text-xl font-semibold my-4">Profesores Destacados</h2>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center space-x-3">
+<img alt="Professor" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinadC7hOsf6x5leZr0aSnG2QyPo-K_gcEHzY4FIzB6Y2vFl0C_8K1yPblMRFcavAtEJxr3ujb6Ws-xvUNGLaQ0NhNjRWy8mq2X9O3NAO-jMvFiz5PV_BZ3t8TYGV21zfsSe2aJ3hymP_7Lc9jAGC-jjjNo8-sxpwX8AAA9R2_XafxN1dDIYPB5bvmPM8eA5WWSnCurFordUR1fOCwuzhRmg9H2VEBDh1nuq66VXr3sm82WBNT_P7mNXeMUmoBQ4s6xplKBrUpOGY"/>
+<p class="font-semibold">Dra. Laura Gómez</p>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="font-bold text-gray-800 dark:text-gray-300">4.9</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+<div class="flex items-center space-x-3">
+<img alt="Professor" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAfwSahsRINWCQJhD7K9KFZctf3XkgZmR3-NsnQAK6FaKZlt86Qsk6Oh5T0lFyb1mBi_jjFkRxvp-sdX8D4aEBGbhXP_ZWJkCu5RbCFOI7Wc_ee1tOB9_yPQ1PXld-T8sCCjxR6ztVFSI-iv5BoRye431RiN66OTsTxn2PmMoIVRuvZaGyaVr8qCF_t3YLOfkcJnH35JRJuKBjverEyHkC2g2FenTywG3LxgyjFUwkwXzaAq1gTJRA7kUqKjee3UMGepfZzjndwM0"/>
+<p class="font-semibold">Dr. Carlos Mendoza</p>
+</div>
+<div class="flex items-center space-x-1 text-yellow-500">
+<span class="font-bold text-gray-800 dark:text-gray-300">4.8</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Chart.js configuration
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            const textColor = isDarkMode ? '#E0E0E0' : '#1F2937';
+            const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+            // Ratings Distribution Chart
+            const ratingsCtx = document.getElementById('ratingsChart').getContext('2d');
+            new Chart(ratingsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['5 Estrellas', '4 Estrellas', '3 Estrellas', '2 Estrellas', '1 Estrella'],
+                    datasets: [{
+                        label: 'Número de Evaluaciones',
+                        data: [650, 350, 150, 50, 45],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(255, 159, 64, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: textColor },
+                            grid: { color: gridColor }
+                        },
+                        x: {
+                            ticks: { color: textColor },
+                            grid: { color: 'transparent' }
+                        }
+                    }
+                }
+            });
+            // Sentiment Analysis Chart
+            const sentimentCtx = document.getElementById('sentimentChart').getContext('2d');
+            new Chart(sentimentCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Positivo', 'Neutral', 'Negativo'],
+                    datasets: [{
+                        label: 'Sentimiento',
+                        data: [68, 22, 10],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(255, 206, 86, 0.8)',
+                            'rgba(255, 99, 132, 0.8)'
+                        ],
+                        borderColor: isDarkMode ? '#1E1E1E' : '#FFFFFF',
+                        borderWidth: 3,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: textColor,
+                                boxWidth: 12,
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body></html>
