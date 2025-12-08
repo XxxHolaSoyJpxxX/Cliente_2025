@@ -1,0 +1,128 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:color';
+
+.contact-form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form__intro {
+  text-align: center;
+  color: $text-secondary;
+  margin-bottom: $spacing-xl;
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.form-label {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+
+  &::after {
+    content: ' *';
+    color: $danger-color;
+  }
+}
+
+.form-input {
+  @include input-base;
+
+  &--error {
+    border-color: $danger-color;
+
+    &:focus {
+      border-color: $danger-color;
+      box-shadow: 0 0 0 3px rgba($danger-color, 0.1);
+    }
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: $font-family;
+}
+
+.form-error {
+  display: none;
+  font-size: $font-size-sm;
+  color: $danger-color;
+  margin-top: 4px;
+
+  &.show {
+    display: block;
+  }
+}
+
+.form-status {
+  display: none;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  animation: slideIn 0.3s ease;
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  &--success {
+    background-color: color.adjust($success-color, $lightness: 45%);
+    color: color.adjust($success-color, $lightness: -10%);
+    border: 1px solid $success-color;
+  }
+
+  &--error {
+    background-color: color.adjust($danger-color, $lightness: 45%);
+    color: color.adjust($danger-color, $lightness: -10%);
+    border: 1px solid $danger-color;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive
+@include respond-to('sm') {
+  .contact-form {
+    gap: $spacing-lg;
+  }
+}
+
+// Extend para inputs disabled
+%input-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: $bg-secondary;
+}
+
+.form-input:disabled {
+  @extend %input-disabled;
+}
+
+.form-textarea:disabled {
+  @extend %input-disabled;
+}

@@ -1,0 +1,45 @@
+h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.detalle-card {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  color: #856404;
+  border: 1px solid #ffeeba;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .btn-limpiar {
+    margin-top: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #bb2d3b;
+    }
+  }
+}
+
+.texto-vacio {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  
+  // Puedes usar pseudo-elementos fácilmente en SCSS
+  &::before {
+    content: '!';
+  }
+}

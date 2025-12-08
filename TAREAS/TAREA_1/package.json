@@ -1,0 +1,23 @@
+{
+  "name": "cv-online",
+  "version": "1.0.0",
+  "description": "CV en línea con HTML, SCSS y TypeScript",
+  "scripts": {
+    "build:sass": "sass src/styles/main.scss dist/css/style.css --style compressed",
+    "build:ts": "tsc",
+    "copy:html": "node -e \"require('fs').copyFileSync('src/index.html', 'dist/index.html')\"",
+    "copy:data": "node -e \"require('fs').mkdirSync('dist/data', {recursive: true})\" && node -e \"require('fs').copyFileSync('src/data/cv-data.json', 'dist/data/cv-data.json')\"",
+    "copy:images": "node -e \"const fs=require('fs'); const path=require('path'); if(fs.existsSync('src/images')){fs.mkdirSync('dist/images', {recursive: true}); fs.readdirSync('src/images').forEach(file => fs.copyFileSync(path.join('src/images', file), path.join('dist/images', file)))}\"",
+    "clean": "node -e \"const fs=require('fs'); if(fs.existsSync('dist')){fs.rmSync('dist', {recursive: true, force: true})}\"",
+    "prebuild": "npm run clean && node -e \"require('fs').mkdirSync('dist/css', {recursive: true})\" && node -e \"require('fs').mkdirSync('dist/js', {recursive: true})\"",
+    "build": "npm run prebuild && npm run build:sass && npm run build:ts && npm run copy:html && npm run copy:data && npm run copy:images",
+    "watch:sass": "sass src/styles/main.scss dist/css/style.css --watch",
+    "watch:ts": "tsc --watch",
+    "dev": "npm run build && npm-run-all --parallel watch:sass watch:ts"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3",
+    "npm-run-all": "^4.1.5"
+  }
+}

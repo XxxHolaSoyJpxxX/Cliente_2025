@@ -1,0 +1,7 @@
+// Usar @use en lugar de @import (Sass moderno)
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+@use 'header';
+@use 'sections';
+@use 'form';

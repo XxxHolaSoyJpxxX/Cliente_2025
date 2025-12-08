@@ -1,0 +1,45 @@
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+
+  <label>Nombre</label>
+  <input type="text" formControlName="nombre">
+  <div *ngIf="registroForm.get('nombre')?.touched && registroForm.get('nombre')?.invalid">
+    El nombre es requerido y debe tener al menos 2 caracteres.
+  </div>
+
+  <label>Correo electrónico</label>
+  <input type="email" formControlName="email">
+  <div *ngIf="registroForm.get('email')?.touched && registroForm.get('email')?.invalid">
+    Ingresa un correo válido.
+  </div>
+
+  <label>Edad</label>
+  <input type="number" formControlName="edad">
+  <div *ngIf="registroForm.get('edad')?.touched && registroForm.get('edad')?.invalid">
+    Debes ser mayor de 18 años.
+  </div>
+
+  <label>Contraseña</label>
+  <input type="password" formControlName="password">
+  <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.invalid">
+    La contraseña debe tener mínimo 8 caracteres.
+  </div>
+
+  <label>Confirmar contraseña</label>
+  <input type="password" formControlName="confirmarPassword">
+  <div *ngIf="registroForm.get('confirmarPassword')?.errors?.['noIguales']">
+    Las contraseñas no coinciden.
+  </div>
+
+  <label>
+    <input type="checkbox" formControlName="terminos">
+    Acepto los términos y condiciones
+  </label>
+  <div *ngIf="registroForm.get('terminos')?.touched && registroForm.get('terminos')?.invalid">
+    Debes aceptar los términos.
+  </div>
+
+  <button type="submit" [disabled]="registroForm.invalid">
+    Registrar
+  </button>
+
+</form>

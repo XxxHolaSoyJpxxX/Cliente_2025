@@ -1,0 +1,13 @@
+<h3>Detalle</h3>
+
+<div *ngIf="itemDetalle; else sinSeleccion">
+  <div class="detalle-card">
+    <h2>{{ itemDetalle }}</h2>
+    <p>Has seleccionado este título.</p>
+    <button (click)="limpiar()" class="btn-limpiar">Limpiar Selección</button>
+  </div>
+</div>
+
+<ng-template #sinSeleccion>
+  <p class="texto-vacio">No hay ningún elemento seleccionado. <br> Haz clic en la lista.</p>
+</ng-template>

@@ -1,0 +1,118 @@
+{
+  "personal": {
+    "name": "Juan Pérez García",
+    "title": "Desarrollador Full Stack",
+    "email": "juan.perez@email.com",
+    "phone": "+52 33 1234 5678",
+    "location": "Guadalajara, Jalisco, México",
+    "linkedin": "https://linkedin.com/in/juanperez",
+    "github": "https://github.com/juanperez",
+    "summary": "Desarrollador Full Stack con 5+ años de experiencia en tecnologías web modernas. Especializado en React, Node.js, TypeScript y arquitecturas escalables. Apasionado por crear soluciones eficientes y mantener código limpio."
+  },
+  "contactEmail": "tu-email@ejemplo.com",
+  "experience": [
+    {
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Solutions Inc.",
+      "period": "2021 - Presente",
+      "description": "Desarrollo de aplicaciones web empresariales usando React, Node.js y MongoDB. Liderazgo de equipo de 4 desarrolladores.",
+      "achievements": [
+        "Implementé arquitectura de microservicios que redujo tiempos de carga en 40%",
+        "Desarrollé sistema de autenticación OAuth2 para 50,000+ usuarios"
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Digital Agency MX",
+      "period": "2019 - 2021",
+      "description": "Desarrollo de sitios web y aplicaciones para clientes corporativos.",
+      "achievements": [
+        "Creé 15+ proyectos web responsivos",
+        "Optimicé SEO aumentando tráfico orgánico en 60%"
+      ]
+    },
+    {
+      "title": "Junior Frontend Developer",
+      "company": "Startup Lab",
+      "period": "2018 - 2019",
+      "description": "Desarrollo de interfaces de usuario y componentes reutilizables.",
+      "achievements": [
+        "Implementé biblioteca de componentes con Storybook",
+        "Mejoré accesibilidad web cumpliendo estándares WCAG 2.1"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "institution": "Universidad de Guadalajara",
+      "period": "2014 - 2018",
+      "description": "Titulado con mención honorífica"
+    },
+    {
+      "degree": "Certificación AWS Solutions Architect",
+      "institution": "Amazon Web Services",
+      "period": "2022",
+      "description": "Certificación profesional en arquitectura cloud"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["HTML5", "CSS3/SCSS", "JavaScript", "TypeScript", "React", "Vue.js", "Responsive Design"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "NestJS", "Python", "Django", "REST APIs", "GraphQL"]
+    },
+    {
+      "category": "Database",
+      "items": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
+    },
+    {
+      "category": "DevOps",
+      "items": ["Docker", "AWS", "CI/CD", "Git", "Linux", "Nginx"]
+    },
+    {
+      "category": "Herramientas",
+      "items": ["VS Code", "Webpack", "Vite", "Jest", "Postman", "Figma"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-commerce Platform",
+      "description": "Plataforma de comercio electrónico con carrito de compras, pasarela de pago y panel de administración.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "link": "https://github.com/juanperez/ecommerce"
+    },
+    {
+      "name": "Task Management App",
+      "description": "Aplicación de gestión de tareas con funcionalidad drag & drop y colaboración en tiempo real.",
+      "technologies": ["Vue.js", "Socket.io", "Express", "PostgreSQL"],
+      "link": "https://github.com/juanperez/task-app"
+    },
+    {
+      "name": "Weather Dashboard",
+      "description": "Dashboard meteorológico con gráficas interactivas y pronóstico de 7 días.",
+      "technologies": ["TypeScript", "Chart.js", "OpenWeather API"],
+      "link": "https://github.com/juanperez/weather-dash"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2022"
+    },
+    {
+      "name": "Meta Front-End Developer Professional Certificate",
+      "issuer": "Meta (Coursera)",
+      "date": "2021"
+    },
+    {
+      "name": "MongoDB Certified Developer",
+      "issuer": "MongoDB University",
+      "date": "2020"
+    }
+  ]
+}

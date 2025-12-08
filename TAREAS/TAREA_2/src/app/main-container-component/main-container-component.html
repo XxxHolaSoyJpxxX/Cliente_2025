@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Comunicación entre Hermanos</h1>
+  
+  <div class="panels-wrapper">
+    <app-left-panel-component
+      class="panel"
+      [seleccionActual]="itemSeleccionado" 
+      (onItemSelect)="recibirSeleccion($event)">
+    </app-left-panel-component>
+
+    <app-right-panel-component 
+      class="panel"
+      [itemDetalle]="itemSeleccionado" 
+      (onClear)="limpiarSeleccion()">
+    </app-right-panel-component>
+  </div>
+
+</div>

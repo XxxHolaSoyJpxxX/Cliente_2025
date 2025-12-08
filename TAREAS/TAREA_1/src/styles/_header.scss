@@ -1,0 +1,113 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: $spacing-2xl 0;
+  box-shadow: $shadow-lg;
+
+  &__content {
+    display: grid;
+    gap: $spacing-xl;
+
+    @include respond-to('lg') {
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+    }
+  }
+
+  &__info {
+    animation: fadeInUp 0.6s ease;
+  }
+
+  &__name {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-sm;
+    line-height: $line-height-tight;
+
+    @include respond-to('md') {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-md;
+    opacity: 0.95;
+
+    @include respond-to('md') {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__summary {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    opacity: 0.9;
+    max-width: 600px;
+
+    @include respond-to('md') {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    animation: fadeInRight 0.6s ease 0.2s backwards;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-xs;
+  border-radius: $border-radius;
+  @include smooth-transition;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  span, a {
+    color: white;
+    font-size: $font-size-sm;
+    word-break: break-word;
+  }
+
+  a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

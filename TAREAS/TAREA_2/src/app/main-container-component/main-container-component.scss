@@ -1,0 +1,21 @@
+.container {
+  padding: 20px;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .panels-wrapper {
+    display: flex;
+    gap: 20px;
+
+    .panel {
+      flex: 1; /* 50% cada uno */
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+  }
+}
